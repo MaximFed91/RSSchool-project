@@ -1,0 +1,43 @@
+$color1: #b9bdbb;
+$color2: #29a792;
+$color3: #666666;
+$color4: #297fa7;
+@import "reset";
+@import "main-menu";
+@import "footer";
+@import "categr";
+@import "levels";
+@import "total";
+@import "score";
+@import "settings";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 400;
+    background-color: $color1;
+}
+a {
+    text-decoration: none;
+}
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.application {
+    padding: 0 10px;
+    transform: translateX(0);
+    transition: all 0.7s;
+    min-height: calc(100vh - 60px);
+}
+.hide {
+    transform: translateX(-100vw);
+}

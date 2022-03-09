@@ -1,0 +1,26 @@
+.footer {
+    height: 45px;
+    padding: 0 15px;
+    &__inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $color3;
+        font-weight: 600;
+        & a{
+            display: inline-block;
+        }
+    }
+}
+.rss {
+    width: 61px;
+    height: 23px;
+    background-image: url("../images/imgUI/rss.svg");
+}
+.developer {
+    font-weight: 600;
+    color: $color3;
+}

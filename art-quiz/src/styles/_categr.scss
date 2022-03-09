@@ -1,0 +1,102 @@
+.categr {
+    max-width: 1200px;
+    margin: 0 auto;
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0 20px;
+    }
+    &-logo {
+        width: 166px;
+        height: 62px;
+    }
+    &-title {
+        font-size: 2rem;
+        color: $color2;
+        margin-bottom: 15px;
+    }
+    &-item {
+        width: 100%;
+        background-color: $color3;
+        padding-top: 10px;
+        cursor: pointer;
+        transition: all .7s;
+        &:hover {
+            box-shadow: 0px 0px 10px 10px rgba(123, 124, 124, 0.8);
+        }
+        &__top {
+            margin-bottom: 10px;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &__title {
+            font-weight: 600;
+            color: white;
+            font-size: 2rem;
+        }
+        &__score {
+            font-size: 1.4rem;
+            color: $color2;
+            border-radius: 5px;
+            transition: all 0.7s;
+            width: 0;
+            padding: 0;
+            &:hover {
+                transform: scale(1.05);
+            }
+            &-active {
+                border: 1px solid $color2;
+                width: auto;
+                padding: 1px 6px;
+                &-pic {
+                    border: 1px solid $color4;
+                }
+            }
+        }
+        &__img {
+            width: 100%;
+            margin-bottom: -2px;
+            filter: grayscale(100%);
+            &-active {
+                filter: grayscale(0%);
+            }
+        }
+    }
+}
+.home {
+    text-transform: uppercase;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    transition: all 0.7s;
+    border: 1px solid white;
+    border-radius: 5px;
+    &__img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+    }
+    &:hover {
+        transform: scale(1.07);
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+}
+
+@media (min-width:560px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width:850px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
