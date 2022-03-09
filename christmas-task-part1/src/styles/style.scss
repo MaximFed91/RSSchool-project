@@ -1,0 +1,52 @@
+@font-face {
+  font-family: Neucha;
+  src: url(../assets/fonts/Neucha-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Steppe;
+  src: url(../assets/fonts/Steppe.ttf);
+  font-weight: normal;
+}
+
+$color1: #192F2D;
+$color2: goldenrod;
+$borderColor: #23b4ca;
+$colorInput: #244441;
+
+@import "reset";
+@import "header";
+@import "footer";
+@import "start-page";
+@import "toys";
+@import "tree";
+@import "lights";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Steppe", sans-serif;
+  color: white;
+  user-select: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: "Steppe", sans-serif;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1740px;
+  padding: 0 10px;
+}

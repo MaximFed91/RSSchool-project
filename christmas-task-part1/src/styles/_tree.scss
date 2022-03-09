@@ -1,0 +1,306 @@
+.tree {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(100vh - 160px);
+  column-gap: 20px;
+  &-bg {
+    background-image: url(../assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__title {
+    font-family: Neucha;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &-settings {
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+    &__buttons {
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    &__button {
+      width: 44px;
+      height: 44px;
+      padding: 4;
+      border: 1px solid transparent;
+      transition: all 0.7s;
+      &_active {
+        border-radius: 15px;
+        border: 1px solid $color2;
+      }
+      &:hover {
+        background-color: rgba(218, 165, 32, 0.5);
+        border-radius: 20px;
+      }
+      & + & {
+        margin-left: 60px;
+      }
+      & img {
+        width: 100%;
+      }
+    }
+    &__trees {
+      margin-bottom: 25px;
+      &-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      &-item {
+        height: 134px;
+        padding: 7px 25px;
+        background: radial-gradient(
+          109.56% 109.56% at 0% -2.94%,
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(179, 246, 255, 0.5) 100%
+        );
+        backdrop-filter: blur(4px);
+        border-radius: 10px;
+        transition: all 0.7s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        & img {
+          height: 100%;
+        }
+      }
+    }
+    &__bg {
+      margin-bottom: 25px;
+      &-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4px;
+        row-gap: 8px;
+      }
+      &-item {
+        padding: 0;
+        height: 72px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid white;
+        transition: all 0.7s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &__lights {
+      &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-item {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid white;
+        transition: all 0.7s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &-color {
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8);
+      }
+      &-red {
+        background-color: red;
+      }
+      &-blue {
+        background-color: rgb(0, 81, 255);
+      }
+      &-green {
+        background-color: rgb(2, 179, 2);
+      }
+      &-yellow {
+        background-color: yellow;
+      }
+      &-switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 26px;
+      }
+      &-switch input {
+        display: none;
+      }
+      &-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 26px;
+        border: 1px solid transparent;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      &-slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      input:checked + &-slider {
+        background-color: $colorInput;
+        border: 1px solid $color2;
+      }
+      input:focus + &-slider {
+        box-shadow: 0 0 1px $colorInput;
+      }
+      input:checked + &-slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+      }
+    }
+    &__reset {
+      margin-top: 20px;
+    }
+  }
+  &-toys {
+    position: relative;
+    z-index: 1;
+    width: 344px;
+    padding-top: 30px;
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 8px;
+    }
+    &__item {
+      position: relative;
+      height: 80px;
+      padding: 10px;
+      background: radial-gradient(
+        109.56% 109.56% at 0% -2.94%,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(179, 246, 255, 0.5) 100%
+      );
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        cursor: move;
+      }
+      &-count {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background: #24c5db;
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 22px;
+      }
+    }
+  }
+  &-tree {
+    position: relative;
+    z-index: 1;
+    background-image: url(../assets/bg/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 1;
+    max-height: calc(100vh - 160px);
+    &__inner {
+      padding: 20px 0;
+      height: 100%;
+      position: relative;
+    }
+    &__img {
+      margin: 0 auto;
+      display: block;
+      height: 100%;
+    }
+    &__drop {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+.area {
+  cursor: default;
+}
+.snow-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.fa-snowflake {
+  color: white;
+  position: absolute;
+  top: -20px;
+  animation: fall linear forwards;
+  z-index: 3;
+  user-select: none;
+}
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+@media (max-width: 1100px) {
+  .tree-settings {
+    &__trees {
+      &-inner {
+        grid-template-columns: 1fr;
+      }
+    }
+    &__bg {
+      &-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    &__lights {
+      &-inner {
+        flex-wrap: wrap;
+        row-gap: 10px;
+      }
+    }
+    &__reset {
+      padding: 7px 5px;
+    }
+  }
+  .tree-toys__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 915px) {
+  .tree-settings__button + .tree-settings__button {
+    margin-left: 0px;
+  }
+  .tree-toys__grid {
+    grid-template-columns: 1fr;
+  }
+ 
+}

@@ -1,0 +1,35 @@
+.header {
+  background-color: $color1;
+  &__inner {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    column-gap: 20px;
+  }
+  &__btn {
+    height: 60px;
+    text-transform: uppercase;
+    font-family: Neucha;
+    font-size: 20px;
+    letter-spacing: 3px;
+    border: 1px solid transparent;
+    transition: all 0.7s;
+    & img {
+      height: 100%;
+    }
+    &:hover {
+      border: 1px solid $color2;
+      border-radius: 20px;
+      background-color: rgba(218, 165, 32, 0.5);
+    }
+  }
+  &__selected {
+    font-family: Neucha;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+}
